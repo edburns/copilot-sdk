@@ -154,8 +154,7 @@ public class ParamTest {
         Param<Float> p = Param.of(Float.class, "f", "float val", false, "1.5");
         assertEquals("1.5", p.defaultValue());
 
-        assertThrows(IllegalArgumentException.class,
-                () -> Param.of(Float.class, "f", "float val", false, "notfloat"));
+        assertThrows(IllegalArgumentException.class, () -> Param.of(Float.class, "f", "float val", false, "notfloat"));
     }
 
     @Test
@@ -163,8 +162,7 @@ public class ParamTest {
         Param<Short> p = Param.of(Short.class, "s", "short val", false, "100");
         assertEquals("100", p.defaultValue());
 
-        assertThrows(IllegalArgumentException.class,
-                () -> Param.of(Short.class, "s", "short val", false, "99999"));
+        assertThrows(IllegalArgumentException.class, () -> Param.of(Short.class, "s", "short val", false, "99999"));
     }
 
     @Test
@@ -172,8 +170,7 @@ public class ParamTest {
         Param<Byte> p = Param.of(Byte.class, "b", "byte val", false, "127");
         assertEquals("127", p.defaultValue());
 
-        assertThrows(IllegalArgumentException.class,
-                () -> Param.of(Byte.class, "b", "byte val", false, "999"));
+        assertThrows(IllegalArgumentException.class, () -> Param.of(Byte.class, "b", "byte val", false, "999"));
     }
 
     @Test
